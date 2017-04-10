@@ -9325,7 +9325,7 @@ module.exports = exports['default'];
 
 
 
-const BASE_URL = "http://api.runes.com/rest/1.0/";
+const BASE_URL = "http://api-atp.wittrock.us/rest/1.0/";
 
 const restCall = options =>
     new __WEBPACK_IMPORTED_MODULE_1_promise___default.a((resolve, reject) => {
