@@ -22,6 +22,13 @@
   "author": "tonypai <tony77794@gmail.com> (http://github.com/tpai)",
   "license": "ISC",
   "dependencies": {
+    "atp-comic": "git+https://git@github.com/DaemonAlchemist/atp-react-admin-comic.git",
+    "atp-entity": "git+https://git@github.com/DaemonAlchemist/atp-redux-entity.git",
+    "atp-flash": "git+https://git@github.com/DaemonAlchemist/atp-react-redux-flash.git",
+    "atp-rest": "git+https://git@github.com/DaemonAlchemist/atp-redux-rest.git",
+    "atp-sugar": "git+https://git@github.com/DaemonAlchemist/atp-sugar.git",
+    "atp-uac": "git+https://git@github.com/DaemonAlchemist/atp-react-admin-uac.git",
+    "atp-ui": "git+https://git@github.com/DaemonAlchemist/atp-react-redux-ui.git",
     "autoprefixer": "^6.5.1",
     "babel-core": "^6.10.4",
     "babel-jest": "^19.0.0",
