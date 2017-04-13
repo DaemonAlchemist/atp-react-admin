@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import {Grid, Row} from "react-bootstrap";
 
-import "atp-sugar";
+import {o} from "atp-sugar";
 
 //--Module definitions--
 import comic from "atp-comic";
@@ -18,7 +18,7 @@ import ui from "atp-ui";
 
 const modules = [
     comic, entity, flash, homepage, uac, ui
-].reduce((joined, module) => joined.$merge(module), {});
+].reduce((joined, module) => joined.merge(module), o({})).raw;
 
 import {Navbar} from "atp-ui";
 import {TabPanel} from "atp-ui";

@@ -4,13 +4,14 @@ import { compose, createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import { reducer as formReducer } from 'redux-form'
+import {o} from "atp-sugar";
 
 const logger = createLogger();
 
 const middleware = __DEVELOPMENT__ ? [thunk, logger] : [thunk];
 
 const createStoreWithMiddleware = (reducers, initialState) => createStore(
-    combineReducers(reducers.$merge({form: formReducer})),
+    combineReducers(o(reducers).merge({form: formReducer}).raw),
     initialState,
     compose(
         applyMiddleware(...middleware),
