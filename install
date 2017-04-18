@@ -8,3 +8,4 @@ git clone https://github.com/DaemonAlchemist/atp-redux-rest.git src/node_modules
 git clone https://github.com/DaemonAlchemist/atp-sugar.git src/node_modules/atp-sugar
 git clone https://github.com/DaemonAlchemist/atp-react-admin-uac.git src/node_modules/atp-uac
 git clone https://github.com/DaemonAlchemist/atp-react-redux-ui.git src/node_modules/atp-ui
+git clone https://github.com/DaemonAlchemist/atp-react-redux-inline-edit.git src/node_modules/atp-inline-edit

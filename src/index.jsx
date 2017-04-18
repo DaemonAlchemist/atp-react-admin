@@ -15,9 +15,10 @@ import flash from "atp-flash";
 import homepage from "home/module";
 import uac from "atp-uac";
 import ui from "atp-ui";
+import inlineEdit from "atp-inline-edit";
 
 const modules = [
-    comic, entity, flash, homepage, uac, ui
+    comic, entity, flash, homepage, inlineEdit, uac, ui
 ].reduce((joined, module) => joined.merge(module), o({})).raw;
 
 import {Navbar} from "atp-ui";
