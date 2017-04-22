@@ -64812,7 +64812,11 @@ const flags = flagNames =>
 
 /* harmony default export */ __webpack_exports__["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux_form__["a" /* reduxForm */])({
     form: 'new-permission-form',
-    onSubmit: (data, dispatch) => dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__reducer_permission__["a" /* Permission */])().action.post(data))
+    onSubmit: (data, dispatch) => dispatch((dispatch, getState) => {
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__reducer_permission__["a" /* Permission */])().action.post(data)(dispatch, getState).then(data => {
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__reducer_permission__["a" /* Permission */])().action.list({})(dispatch, getState);
+        });
+    })
 })(__WEBPACK_IMPORTED_MODULE_2__components_permission_form_create__["a" /* default */]);
 
 
