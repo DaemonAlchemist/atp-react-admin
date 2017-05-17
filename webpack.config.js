@@ -3,7 +3,7 @@ var path = require('path');
 
 module.exports = {
     resolve: {
-        modules: [ path.resolve('./src'), 'node_modules' ],
+        modules: [ path.resolve('./src'), 'node_modules', '.' ],
         extensions: ['.js', '.jsx', '.css', '.scss']
     },
     output: {

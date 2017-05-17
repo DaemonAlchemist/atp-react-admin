@@ -10,3 +10,4 @@ git clone https://github.com/DaemonAlchemist/atp-react-admin-uac.git src/node_mo
 git clone https://github.com/DaemonAlchemist/atp-react-redux-ui.git src/node_modules/atp-ui
 git clone https://github.com/DaemonAlchemist/atp-react-redux-inline-edit.git src/node_modules/atp-inline-edit
 git clone https://github.com/DaemonAlchemist/atp-react-admin-media.git src/node_modules/atp-media
+git clone https://github.com/DaemonAlchemist/atp-config.git src/node_modules/config
