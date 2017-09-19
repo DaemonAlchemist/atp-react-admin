@@ -1,6 +1,11 @@
 const defaults = {
+  login: {
+    tokenPath: "HEADER:login-token"
+  },
   rest: {
-    baseUrl: "http://api.runes.com/rest/1.0/"
+    baseUrl: {
+      default: "http://localhost:3000/"
+    }
   }
 };
 

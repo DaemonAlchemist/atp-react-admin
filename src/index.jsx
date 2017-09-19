@@ -6,6 +6,10 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import {Grid, Row} from "react-bootstrap";
 
+import defaults from "../config/defaults";
+import config from 'atp-config';
+config.setValues(defaults);
+
 import {o} from "atp-sugar";
 
 //--Module definitions--
