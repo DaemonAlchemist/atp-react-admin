@@ -63,6 +63,7 @@
     "babel-cli": "^6.8.0",
     "babel-eslint": "^7.0.0",
     "babel-plugin-rewire": "^1.0.0-rc-1",
+    "babel-preset-react-hmre": "^1.1.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.7.1",
