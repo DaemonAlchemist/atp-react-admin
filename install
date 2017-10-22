@@ -4,7 +4,7 @@ npm install
 git clone https://github.com/DaemonAlchemist/atp-react-admin-comic.git src/node_modules/atp-comic
 git clone https://github.com/DaemonAlchemist/atp-redux-entity.git src/node_modules/atp-entity
 git clone https://github.com/DaemonAlchemist/atp-react-redux-flash.git src/node_modules/atp-flash
-git clone https://github.com/DaemonAlchemist/atp-redux-rest.git src/node_modules/atp-rest
+git clone https://github.com/DaemonAlchemist/atp-redux-rest.git src/node_modules/atp-rest-client
 git clone https://github.com/DaemonAlchemist/atp-sugar.git src/node_modules/atp-sugar
 git clone https://github.com/DaemonAlchemist/atp-react-admin-uac.git src/node_modules/atp-uac
 git clone https://github.com/DaemonAlchemist/atp-react-redux-ui.git src/node_modules/atp-ui
