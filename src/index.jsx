@@ -14,7 +14,7 @@ import {o} from "atp-sugar";
 
 //--Module definitions--
 import comic from "atp-comic";
-import entity from "atp-entity";
+import entity from "atp-redux-entity";
 import flash from "atp-flash";
 import homepage from "home/module";
 import media from "atp-media";
