@@ -13,7 +13,7 @@ const {f} = require('atp-sugar');
 const config = {
     watcher: {
         delay: 0.5,
-        moduleDir: "lib/node_modules",
+        moduleDir: "./lib/node_modules",
         compileCmd: "npm run compile"
     }
 };
@@ -41,15 +41,16 @@ fs.readdir(config.watcher.moduleDir, (err, files) => {
         .concat(compile('.', 'main', false))
     ).then(() => {
         //Watch for file changes
+        let appCompileEvents = {};
         files.map(module => ({name: module, dir: config.watcher.moduleDir + "/" + module}))
             .concat({name: 'main', dir: '.'})
             .forEach(module => {
                 console.log("Watching for file changes in " + module.name + " (" + module.dir + "/src) ...");
-                let appCompileEvent = f(() => {
+                appCompileEvents[module.name] = f(() => {
                     compile(module.dir, module.name, false);
                 }).delay();
-                fs.watch(module.dir + "/src", () => {
-                    appCompileEvent.runIn(config.watcher.delay).seconds();
+                fs.watch(module.dir + "/src", {recursive: true}, () => {
+                    appCompileEvents[module.name].runIn(config.watcher.delay).seconds();
                 });
             });
     });
