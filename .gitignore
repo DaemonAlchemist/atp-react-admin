@@ -31,3 +31,6 @@ yarn.lock
 
 # PHPStorm
 .idea
+
+# Compiled files
+lib

@@ -14,7 +14,7 @@ module.exports = Object.assign({}, defaultConfig, {
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
-        './src/index'
+        './lib/index'
     ],
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
