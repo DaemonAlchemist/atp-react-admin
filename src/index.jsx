@@ -5,6 +5,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import {Grid, Row} from "react-bootstrap";
+import {DragDropContextProvider} from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 import defaults from "../config/defaults";
 import config from 'atp-config';
@@ -36,19 +38,21 @@ import {FlashMessages} from "atp-flash";
 import createStore from 'redux/store';
 
 render(
-    <Provider store={createStore(modules.reducers, modules.init)}>
-        <Grid fluid={true}>
-            <Authenticated yes>
-                <Row>
-                    <Navbar title={"ATP Admin!"} leftMenu="main" rightMenu="altMain"/>
-                </Row>
-                <Row><TabPanel/></Row>
-            </Authenticated>
-            <Authenticated no>
-                <LoginForm />
-            </Authenticated>
-            <FlashMessages/>
-        </Grid>
-    </Provider>,
+    <DragDropContextProvider backend={HTML5Backend}>
+        <Provider store={createStore(modules.reducers, modules.init)}>
+            <Grid fluid={true}>
+                <Authenticated yes>
+                    <Row>
+                        <Navbar title={"ATP Admin!"} leftMenu="main" rightMenu="altMain"/>
+                    </Row>
+                    <Row><TabPanel/></Row>
+                </Authenticated>
+                <Authenticated no>
+                    <LoginForm />
+                </Authenticated>
+                <FlashMessages/>
+            </Grid>
+        </Provider>
+    </DragDropContextProvider>,
     document.getElementById('react')
 );
