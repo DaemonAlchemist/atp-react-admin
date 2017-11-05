@@ -29,6 +29,7 @@
     "atp-flash": ">=0.1.0",
     "atp-inline-edit": ">=0.1.0",
     "atp-media": ">=0.1.0",
+    "atp-pointfree": "^0.2.1",
     "atp-redux-entity": ">=0.1.0",
     "atp-sugar": ">=0.4.3",
     "atp-uac": ">=0.1.0",
