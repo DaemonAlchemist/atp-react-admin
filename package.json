@@ -12,7 +12,9 @@
     "lint": "eslint $(find src test -name \\*.jsx)",
     "precommit": "npm run lint",
     "prepush": "npm test",
-    "watch": "node watch.js"
+    "watch": "node watch.js",
+    "check": "ncu --packageFile package.json",
+    "evergreen": "ncu -ua --packageFile package.json"
   },
   "repository": {
     "type": "git",
