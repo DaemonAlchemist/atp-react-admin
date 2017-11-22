@@ -4,7 +4,7 @@ const defaults = {
   },
   rest: {
     baseUrl: {
-      default: "http://localhost:3000/"
+      default: "http://192.168.254.54:3000/"
     }
   }
 };

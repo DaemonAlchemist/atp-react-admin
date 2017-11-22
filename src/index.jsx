@@ -3,6 +3,8 @@
 import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
+import {ConnectedRouter} from 'react-router-redux';
+import createBrowserHistory from "history/createBrowserHistory";
 import { Provider } from 'react-redux';
 import {Grid, Row} from "react-bootstrap";
 import {DragDropContextProvider} from 'react-dnd';
@@ -37,21 +39,25 @@ import {FlashMessages} from "atp-flash";
 
 import createStore from 'redux/store';
 
+const history = createBrowserHistory();
+
 render(
     <DragDropContextProvider backend={HTML5Backend}>
-        <Provider store={createStore(modules.reducers, modules.init)}>
-            <Grid fluid={true}>
-                <Authenticated yes>
-                    <Row>
-                        <Navbar title={"ATP Admin!"} leftMenu="main" rightMenu="altMain"/>
-                    </Row>
-                    <Row><TabPanel/></Row>
-                </Authenticated>
-                <Authenticated no>
-                    <LoginForm />
-                </Authenticated>
-                <FlashMessages/>
-            </Grid>
+        <Provider store={createStore(modules.reducers, modules.init, history)}>
+            <ConnectedRouter history={history}>
+                <Grid fluid={true}>
+                    <Authenticated yes>
+                        <Row>
+                            <Navbar title={"ATP Admin!"} leftMenu="main" rightMenu="altMain"/>
+                        </Row>
+                        <Row><TabPanel/></Row>
+                    </Authenticated>
+                    <Authenticated no>
+                        <LoginForm />
+                    </Authenticated>
+                    <FlashMessages/>
+                </Grid>
+            </ConnectedRouter>
         </Provider>
     </DragDropContextProvider>,
     document.getElementById('react')
