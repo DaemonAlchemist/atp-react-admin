@@ -26,9 +26,10 @@ import uac from "atp-uac";
 import ui from "atp-ui";
 import inlineEdit from "atp-inline-edit";
 import tree from 'atp-tree';
+import tabRouter from 'atp-react-tab-router';
 
 const modules = [
-    comic, entity, flash, homepage, inlineEdit, media, uac, ui, tree
+    comic, entity, flash, homepage, inlineEdit, media, uac, ui, tree, tabRouter
 ].reduce((joined, module) => joined.merge(module), o({})).raw;
 
 import {Navbar} from "atp-ui";
