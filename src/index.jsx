@@ -38,6 +38,7 @@ import {Authenticated} from "atp-uac";
 import {LoginForm} from "atp-uac";
 import {FlashMessages} from "atp-flash";
 import {TabRouter} from 'atp-react-tab-router';
+import {Route} from 'react-router';
 
 import createStore from 'redux/store';
 
@@ -52,7 +53,7 @@ render(
                         <Row>
                             <Navbar title={"ATP Admin!"} leftMenu="main" rightMenu="altMain"/>
                         </Row>
-                        <Row><TabRouter /></Row>
+                        <Row><TabRouter routes={modules.routes}/></Row>
                         <Row><TabPanel/></Row>
                     </Authenticated>
                     <Authenticated no>

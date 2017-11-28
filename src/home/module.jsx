@@ -5,7 +5,4 @@
 import HomePage from "./controller/homepage";
 
 export default {
-    routes: [
-        {path: "/", controller: HomePage},
-    ]
 };
