@@ -33,7 +33,6 @@ const modules = [
 ].reduce((joined, module) => joined.merge(module), o({})).raw;
 
 import {Navbar} from "atp-ui";
-import {TabPanel} from "atp-ui";
 import {Authenticated} from "atp-uac";
 import {LoginForm} from "atp-uac";
 import {FlashMessages} from "atp-flash";
@@ -54,7 +53,6 @@ render(
                             <Navbar title={"ATP Admin!"} leftMenu="main" rightMenu="altMain"/>
                         </Row>
                         <Row><TabRouter routes={modules.routes}/></Row>
-                        <Row><TabPanel/></Row>
                     </Authenticated>
                     <Authenticated no>
                         <LoginForm />
