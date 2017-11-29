@@ -20,7 +20,6 @@ import {o} from "atp-sugar";
 import comic from "atp-comic";
 import entity from "atp-redux-entity";
 import flash from "atp-flash";
-import homepage from "home/module";
 import media from "atp-media";
 import uac from "atp-uac";
 import ui from "atp-ui";
@@ -29,7 +28,7 @@ import tree from 'atp-tree';
 import tabRouter from 'atp-react-tab-router';
 
 const modules = [
-    comic, entity, flash, homepage, inlineEdit, media, uac, ui, tree, tabRouter
+    comic, entity, flash, inlineEdit, media, uac, ui, tree, tabRouter
 ].reduce((joined, module) => joined.merge(module), o({})).raw;
 
 import {Navbar} from "atp-ui";
