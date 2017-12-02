@@ -28,11 +28,11 @@
   "author": "tonypai <tony77794@gmail.com> (http://github.com/tpai)",
   "license": "ISC",
   "dependencies": {
-    "atp-comic": ">=0.11.1",
+    "atp-comic": ">=0.11.2",
     "atp-config": ">=0.3.3",
     "atp-flash": ">=0.1.1",
     "atp-inline-edit": ">=0.2.1",
-    "atp-media": ">=0.5.1",
+    "atp-media": ">=0.5.2",
     "atp-pointfree": ">=0.4.0",
     "atp-react-tab-router": "^0.3.0",
     "atp-redux-entity": ">=0.2.1",
@@ -83,7 +83,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.2",
+    "babel-eslint": "^8.0.3",
     "babel-plugin-rewire": "^1.1.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react-hmre": "^1.1.1",
