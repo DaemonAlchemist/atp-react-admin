@@ -12,6 +12,7 @@ import HTML5Backend from 'react-dnd-html5-backend';
 
 import defaults from "../config/defaults";
 import config from 'atp-config';
+
 config.setValues(defaults);
 
 import {o} from "atp-sugar";
