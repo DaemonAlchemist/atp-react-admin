@@ -34,7 +34,7 @@
     "atp-inline-edit": ">=0.3.0",
     "atp-media": ">=0.6.0",
     "atp-pointfree": ">=0.4.0",
-    "atp-react-tab-router": "^0.3.0",
+    "atp-react-tab-router": "^0.3.1",
     "atp-redux-entity": ">=0.2.1",
     "atp-sugar": ">=0.8.3",
     "atp-tree": "^0.4.7",

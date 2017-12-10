@@ -39,7 +39,7 @@ import {FlashMessages} from "atp-flash";
 import {TabRouter} from 'atp-react-tab-router';
 import {Route} from 'react-router';
 
-import createStore from 'redux/store';
+import createStore from './redux/store';
 
 const history = createBrowserHistory();
 
