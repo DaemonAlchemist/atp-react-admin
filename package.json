@@ -28,10 +28,10 @@
   "author": "tonypai <tony77794@gmail.com> (http://github.com/tpai)",
   "license": "ISC",
   "dependencies": {
-    "atp-comic": ">=0.15.0",
+    "atp-comic": ">=0.16.0",
     "atp-config": ">=0.3.3",
     "atp-flash": ">=0.1.1",
-    "atp-inline-edit": ">=0.5.0",
+    "atp-inline-edit": ">=0.7.0",
     "atp-media": ">=0.7.0",
     "atp-pointfree": ">=0.5.0",
     "atp-react-tab-router": "^0.3.1",
@@ -39,7 +39,7 @@
     "atp-sugar": ">=0.8.3",
     "atp-tree": "^0.4.7",
     "atp-uac": ">=0.4.0",
-    "atp-ui": ">=0.4.0",
+    "atp-ui": ">=0.5.0",
     "autoprefixer": "^7.2.2",
     "babel-core": "^6.26.0",
     "babel-jest": "^21.2.0",
@@ -79,7 +79,8 @@
     "style-loader": "^0.19.0",
     "superagent": "^3.8.2",
     "typeof": "^1.0.0",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
