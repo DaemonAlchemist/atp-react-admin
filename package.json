@@ -28,7 +28,7 @@
   "author": "tonypai <tony77794@gmail.com> (http://github.com/tpai)",
   "license": "ISC",
   "dependencies": {
-    "atp-comic": ">=0.16.0",
+    "atp-comic": ">=0.17.0",
     "atp-config": ">=0.3.3",
     "atp-flash": ">=0.1.1",
     "atp-inline-edit": ">=0.7.0",
