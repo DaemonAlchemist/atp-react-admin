@@ -9,6 +9,9 @@ const defaults = {
   },
   media: {
     staticHost: "darkwynd-chronicles.s3-website-us-east-1.amazonaws.com"
+  },
+  public: {
+    hostName: "www.darkwyndchronicles.com"
   }
 };
 
