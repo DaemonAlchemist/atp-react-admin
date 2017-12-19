@@ -12,7 +12,7 @@ const {f} = require('atp-sugar');
 //Set delay check starting the recompile (PHPStorm tends to fire multiple file changes events in quick bursts)
 const config = {
     watcher: {
-        delay: 0.5,
+        delay: 0.1,
         moduleDir: "./lib/node_modules",
         compileCmd: "npm run compile"
     }
@@ -49,8 +49,11 @@ fs.readdir(config.watcher.moduleDir, (err, files) => {
                 appCompileEvents[module.name] = f(() => {
                     compile(module.dir, module.name, false);
                 }).delay();
-                fs.watch(module.dir + "/src", {recursive: true}, () => {
-                    appCompileEvents[module.name].runIn(config.watcher.delay).seconds();
+                fs.watch(module.dir + "/src", {recursive: true}, (eventType, fileName) => {
+                    if(fileName.indexOf("___jb") === -1) {
+                        console.log(eventType + ": " + fileName);
+                        appCompileEvents[module.name].runIn(config.watcher.delay).seconds();
+                    }
                 });
             });
     });

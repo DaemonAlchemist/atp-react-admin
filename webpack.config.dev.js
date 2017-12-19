@@ -13,10 +13,10 @@ module.exports = Object.assign({}, defaultConfig, {
     },
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
-        'webpack/hot/only-dev-server',
         './lib/index'
     ],
     plugins: [
+        new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             __DEVELOPMENT__: JSON.stringify(true)
