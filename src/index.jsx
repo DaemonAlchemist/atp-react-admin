@@ -18,8 +18,8 @@ const refresh = () => {
 refresh();
 
 if(module.hot) {
-    module.hot.accept("./app", () => {
-        App = require("./app").default;
+    module.hot.accept("./app/app", () => {
+        App = require("./app/app").default;
         refresh();
     });
     module.hot.accept("./app-container", () => {
