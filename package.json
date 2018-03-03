@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
+    "deploy": "npm run build && aws s3 sync ./www s3://admin.darkwyndchronicles.com --acl public-read",
     "compile": "babel --presets env -d lib/ src/",
     "server": "node server.js",
     "watch": "node watch.js",
