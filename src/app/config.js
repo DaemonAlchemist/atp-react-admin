@@ -4,7 +4,7 @@ const defaults = {
   },
   rest: {
     baseUrl: {
-      default: "http://api.darkwyndchronicles.com:3000/"
+      default: "https://api.darkwyndchronicles.com/"
     }
   },
   media: {
