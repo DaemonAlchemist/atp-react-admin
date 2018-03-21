@@ -25,7 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.4",
-    "atp-comic": ">=0.25.0",
+    "atp-comic": ">=0.26.0",
     "atp-config": ">=0.3.5",
     "atp-flash": ">=0.2.3",
     "atp-inline-edit": ">=0.9.7",
