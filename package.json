@@ -25,7 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
-    "atp-comic": ">=0.26.5",
+    "atp-comic": ">=0.26.6",
     "atp-config": ">=0.3.6",
     "atp-flash": ">=0.2.4",
     "atp-inline-edit": ">=0.10.1",
@@ -96,7 +96,7 @@
     "redux-logger": "^3.0.6",
     "validate-commit-msg": "^2.14.0",
     "webpack-cli": "^2.0.12",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^2.0.0"
   },
   "jest": {
     "collectCoverageFrom": [
