@@ -3,7 +3,7 @@
  */
 
 const fs = require('fs');
-const {exec} = require('child_process');
+const {execSync, exec} = require('child_process');
 const spawn = require('cross-spawn');
 const process = require('process');
 const Promise = require('promise');
@@ -13,7 +13,7 @@ const config = {
     watcher: {
         delay: 0.1,
         moduleDir: "./lib/node_modules",
-        compileCmd: "npm run compile"
+        compileCmd: "rm -rf ~/.config && npm run compile"
     }
 };
 const extensions = {
@@ -25,16 +25,16 @@ const events = ['change'];
 const compile = (path, name, deleteNodeModules = false) => new Promise((resolve, reject) => {
     console.log("Compiling module: " + name + "...");
     const cmd = config.watcher.compileCmd + (deleteNodeModules ? " && rm -rf node_modules" : "");
-    exec(cmd, {cwd: path}, (err, stdout, stderr) => {
-        if(stderr.length > 0) {
-            console.log("Module " + name + " FAILED to recompile:");
-            console.log(stderr);
-            reject();
-        } else {
-            console.log("Module " + name + " recompiled");
-            resolve();
-        }
-    });
+
+    try {
+        execSync(cmd, {cwd: path});
+        console.log("  SUCCESS");
+        resolve();
+    } catch (e) {
+        console.log("  FAIL");
+        console.log(e);
+        reject();
+    }
 });
 
 //Get all installed modules

@@ -1,3 +1,4 @@
+import cms from 'atp-react-admin-cms';
 import comic from 'atp-comic';
 import entity from "atp-redux-entity";
 import flash from "atp-flash";
@@ -9,5 +10,5 @@ import tree from 'atp-tree';
 import tabRouter from 'atp-react-tab-router';
 
 export default [
-    comic, entity, flash, inlineEdit, media, uac, ui, tree, tabRouter
+    cms, comic, entity, flash, inlineEdit, media, uac, ui, tree, tabRouter
 ];
