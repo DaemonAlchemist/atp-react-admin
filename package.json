@@ -4,8 +4,8 @@
   "description": "R^2 Starter Kit is an boilerplate for web development built on top of React, Redux and Webpack based on Node.js environment, also containing webpack loader such as react-hmr and babel 6.",
   "main": "lib/index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
-    "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
+    "start": "npm run compile && cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "build": "npm run compile && cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
     "deploy": "npm run build && aws s3 sync ./www s3://admin.darkwyndchronicles.com --acl public-read",
     "compile": "babel --presets env -d lib/ src/",
     "server": "node server.js",
