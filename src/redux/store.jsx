@@ -5,12 +5,14 @@ import thunk from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 import { reducer as formReducer } from 'redux-form'
 import {routerReducer, routerMiddleware} from 'react-router-redux';
+import basic from 'basic-reducers';
 
 const createStoreWithMiddleware = (reducers, initialState, history) => createStore(
     combineReducers({
         ...reducers,
         form: formReducer,
-        router: routerReducer
+        router: routerReducer,
+        basic
     }),
     initialState,
     compose(
