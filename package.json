@@ -29,7 +29,7 @@
     "atp-config": ">=0.3.6",
     "atp-flash": ">=0.2.4",
     "atp-inline-edit": ">=0.10.2",
-    "atp-media": ">=0.14.2",
+    "atp-media": ">=0.15.0",
     "atp-pointfree": ">=0.11.5",
     "atp-react-admin-cms": "^0.1.3",
     "atp-react-tab-router": "^0.3.5",
